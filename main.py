@@ -206,7 +206,6 @@ def show_hands():
 	print('player_hand : ', show_player_hand)
 
 def ai_turn(is_first_turn = False, drawed_card = None):
-	"未完成 : 再攻撃するかしないかの判定"
 	global ai_hand, player_hand
 	global ai_known, player_saids
 	if is_first_turn:
@@ -216,7 +215,7 @@ def ai_turn(is_first_turn = False, drawed_card = None):
 		draw = drawed_card
 	ai_forecasts = forecast_card(player_hand, ai_known, player_saids)
 	
-	#ここに再攻撃するかどうかの判定入れる
+	#TODO: ここに再攻撃するかどうかの判定入れる
 
 	#最も候補の少ないカードを攻撃対象とする
 	min_f = 0
@@ -255,7 +254,7 @@ def player_turn(is_first_turn = False, drawed_card = None):
 	else:
 		draw = drawed_card
 	#入力
-	#この辺を書き換えて、手札に戻すという選択を取れるようにする
+	#TODO: この辺を書き換えて、手札に戻すという選択を取れるようにする
 	show_text = 'drawed "{}". input [place num] : '.format(''.join((draw.color, str(draw.number))))
 	while True:
 		try:
